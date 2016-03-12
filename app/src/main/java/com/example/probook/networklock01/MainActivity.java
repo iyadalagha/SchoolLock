@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         client = new Client();
         client.start();
+
         Kryo kryo = client.getKryo();
         List<Class<?>> classes = ClassFinder.getClassesOfPackage(getApplicationContext(), "messages");
         for(Class<?> c: classes){
